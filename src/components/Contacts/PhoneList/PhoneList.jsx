@@ -1,21 +1,31 @@
-import Style from '../Component.module.css';
+import Style from './PhoneList.module.css';
 
 import { getFilterContacts } from '../../../redux/phonebook/phonebook-selectors';
-import { deleteContact } from "../../../redux/phonebook/phonebook-operation";
+import { deleteContact } from '../../../redux/phonebook/phonebook-operation';
 import { useSelector, useDispatch } from 'react-redux';
 
 const PhoneList = () => {
   const dispatch = useDispatch();
   const filteredContacts = useSelector(getFilterContacts);
-  
+
   const elements = filteredContacts.map(({ id, name, number }) => (
     <li key={id} className={Style.list}>
-      {name} ({number})
-      <button onClick={() => dispatch(deleteContact(id))} className={Style.btnDelate}>
-        Delete
+      <p>{name} ({number})</p>
+      <div className={Style.line}></div>
+      <button className={Style.noselect} onClick={() => dispatch(deleteContact(id))}>
+        <span className={Style.text}>Delete</span>
+        <span className={Style.icon}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path>
+          </svg>
+        </span>
       </button>
     </li>
-    
   ));
 
   return <ul>{elements}</ul>;

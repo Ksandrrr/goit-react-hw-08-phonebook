@@ -26,7 +26,7 @@ const HomePage = () => {
         {!isLogin && (
           <div>
             <NavLink to="/register" className={Style.link}>
-              Registr
+              Sign up
             </NavLink>
             |
             <NavLink to="/login" className={Style.link}>
@@ -37,8 +37,14 @@ const HomePage = () => {
         {isLogin && (
           <div className={Style.isLoginUser}>
             <p>{email}</p>
+           
+            <button className={Style.btnOut} onClick={onLogout}>
+    Logout
+    <div className={Style.arrowWrapper}>
+        <div className={Style.arrow}></div>
 
-            <button onClick={onLogout} className={Style.Logout}>Logout</button>
+    </div>
+</button>
           </div>
         )}
       </section>

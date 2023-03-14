@@ -21,6 +21,7 @@ const Login = () => {
             <section className="HomePageSection">  
                 <h1>Login</h1>
             <form  className="HomePageForm" onSubmit={handleSubmit}>
+              <div className="HomePageBgrnd">
                 <label>
                     Email
                         <input type="text"
@@ -35,7 +36,8 @@ const Login = () => {
                         />
                     </label>
                     
-                    <button type="submit">Sign in</button>
+              <button type="submit" className='btnHomePage'>Sign in</button>
+              </div>
             </form>
     </section>
         </>

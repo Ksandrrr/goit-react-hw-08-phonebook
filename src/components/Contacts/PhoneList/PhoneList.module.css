@@ -1,38 +1,82 @@
-
-.main {
-    width: 100%;
+.list {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    height: 80px;
-    box-shadow: 0px 0px 9px 0px rgb(121, 121, 121);
-}
-.linkHome {
- font-size: 28px;
-text-decoration: none;
-color: orange;
-}
-.link {
-font-size: 18px;
-text-decoration: none;
-margin: 10px;
-}
-.link:global(.active) {
-color: orange;
-}
-.isLoginUser {
-    width: 100%;
-display: flex;
-justify-content: flex-end;
-align-items: center;
-margin-right: 15px;
-}
-.Logout {
-margin-left: 10px;
-padding: 0 10px;
+    gap: 15px;
+    margin: 5px 10px;
 
 }
+.line {
+width: 5px;
+height: 1px;
+background-color: red;
+flex-grow: 3;
+}
+.noselect {
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: #e62222;
+    
+}
 
+.noselect,
+.noselect span {
+    transition: 200ms;
+}
+
+.noselect .text {
+    transform: translateX(10px);
+    color: white;
+    font-weight: bold;
+    padding-right: 10px;
+    border-right: 1px solid #c41b1b;
+}
+
+.noselect .icon {
+    position: absolute;
+    /* border-left: 1px solid #c41b1b; */
+    transform: translateX(60px);
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.noselect svg {
+    width: 10px;
+    fill: #eee;
+}
+
+.noselect:hover {
+    background: #ff3636;
+}
+
+.noselect:hover .text {
+    color: transparent;
+    border-right: none;
+}
+
+.noselect:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(-30px);
+    border-left: none;
+}
+
+.noselect:focus {
+    outline: none;
+}
+
+.noselect:active .icon svg {
+    transform: scale(0.8);
+}
 
 
 .btnOut {
@@ -91,6 +135,6 @@ padding: 0 10px;
     background: var(--secondary-color);
 }
 
-.btnOut:hover .arrow:before {
+.butbtnOutton:hover .arrow:before {
     right: 0;
 }

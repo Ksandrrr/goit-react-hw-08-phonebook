@@ -3,7 +3,7 @@
 body {
   margin: 0;
 
-    /* font-family: 'Playfair Display', serif; */
+    font-family: 'Staatliches', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17,7 +17,7 @@ button {
 cursor:pointer;
 }
 ul {
-  padding: 10px;
+  padding: 0;
 }
 
 p {
@@ -29,10 +29,21 @@ display: flex;
   align-items: center;
   flex-direction: column
 }
+.HomePageBgrnd {
+width: 238px;
+
+}
 .HomePageForm {
-width: 230px;
+box-shadow: 0px 0px 9px 0px rgb(121, 121, 121);
+background-color: rgb(255, 255, 255);
+border-radius: 10px;
+padding: 40px 60px;
+display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .HomePageForm input {
+
 margin: 15px 0;
 width: 230px;
 height: 30px;
@@ -40,4 +51,42 @@ height: 30px;
 .HomePageForm button {
   margin-top: 5px;
 padding: 5px 30px;
+}
+.btnHomePage {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+.btnHomePage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms
+}
+
+.btnHomePage:hover {
+  color: #e8e8e8;
+}
+
+.btnHomePage:hover::before {
+  width: 100%;
 }

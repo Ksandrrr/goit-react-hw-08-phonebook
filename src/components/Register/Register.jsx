@@ -24,6 +24,7 @@ const Register = () => {
     <section className="HomePageSection">
       <h1>Register</h1>
       <form className="HomePageForm" onSubmit={handleSubmit}>
+        <div className="HomePageBgrnd">
         <label>
           Name
           <input
@@ -45,14 +46,15 @@ const Register = () => {
         </label>
         <label>
           Password
-          <input
+          <input 
             name='password'
             type="password"
             value={password}
             onChange={event => setPassword(event.target.value)}
           />
         </label>
-        <button type="submit">Sign up</button>
+        <button type="submit" className='btnHomePage'>Sign up</button>
+        </div>
       </form>
     </section>
   );
