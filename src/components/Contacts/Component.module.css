@@ -1,0 +1,62 @@
+.section {
+display: flex;
+/* justify-content: center; */
+align-items: center;
+gap: 50px;
+/* height: 100%; */
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  width: 250px;
+  margin-left: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.form label {
+  padding: 5px;
+  width: 193px;
+}
+.form input {
+padding: 7px 10px;
+border: 2px solid orange;
+border-radius: 15px;
+outline: none;
+
+}
+
+.btn {
+  display: block;
+  width: 50%;
+  margin: 15px 5px;
+  padding: 10px 10px;
+  cursor: pointer;
+  background-color: orange;
+  border-radius: 20px;
+  border-color: rgb(228, 137, 255);
+}
+.list {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.btnDelate {
+  width: 70px;
+  height: 20px;
+}
+.Phonebook {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+
+  border-radius: 20px;
+padding: 20px 20px;
+
+/* background-image: linear-gradient(95.2deg, rgba(173, 252, 234, 1) 26.8%, rgba(192, 229, 246, 1) 64%); */
+}
+h1, h2 {
+color: orange;
+}
