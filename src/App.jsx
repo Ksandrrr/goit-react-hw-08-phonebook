@@ -9,7 +9,7 @@ const App = () => {
     return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-          <BrowserRouter basename="/react-homework-template">
+          <BrowserRouter basename="/goit-react-hw-8-phonebook">
             <AuthLayout>
               <Navigation />
             </AuthLayout>
